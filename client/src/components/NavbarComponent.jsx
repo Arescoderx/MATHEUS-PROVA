@@ -7,7 +7,7 @@ function NavbarComponent() {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="fw-bold text-uppercase">
-          CRUD RECEITA DE BOLO
+          Gerenciador de Tarefas
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,7 +18,21 @@ function NavbarComponent() {
               to="/"
               className={({ isActive }) => (isActive ? "active fw-bold" : "")}
             >
-              Home
+              Gerenciador de Tarefas
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/cadastrar"
+              className={({ isActive }) => (isActive ? "active fw-bold" : "")}
+            >
+              Cadastrar Usuário
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/cadastrar-tarefa"
+              className={({ isActive }) => (isActive ? "active fw-bold" : "")}
+            >
+              Cadastrar Tarefa
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

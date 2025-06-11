@@ -4,6 +4,27 @@
       "id": 1,
       "nome": "João Silva",
       "email": "JoaoSilva@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Oliveira",
+      "email": "mariaoliveira@gmail.com"
+    },
+    {
+      "id": "a189",
+      "nome": "Leonardo",
+      "email": "matheus.schmidt@aluno.senai.br"
+    }
+  ],
+  "tarefas": [
+    {
+      "descricao": "Notebook do Messi",
+      "setor": "Mecanica",
+      "nomeUsuario": "João Silva",
+      "prioridade": "Alta",
+      "status": "Em andamento",
+      "dataCriacao": "2025-06-11",
+      "id": "a935"
     }
   ]
 }
