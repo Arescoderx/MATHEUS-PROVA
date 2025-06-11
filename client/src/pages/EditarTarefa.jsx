@@ -136,18 +136,6 @@ function EditarTarefa() {
                 Selecione um status.
               </Form.Control.Feedback>
             </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Data de Criação</Form.Label>
-              <Form.Control
-                type="date"
-                {...register("dataCriacao", { required: true })}
-                isInvalid={errors.dataCriacao}
-              />
-              <Form.Control.Feedback type="invalid">
-                Data de criação é obrigatória.
-              </Form.Control.Feedback>
-            </Form.Group>
             <div className="d-grid">
               <Button type="submit" variant="primary">
                 Salvar Produto

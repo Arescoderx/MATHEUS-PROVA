@@ -21,7 +21,7 @@ function GerenciadorTarefas() {
     const tarefa = tarefas.find((t) => t.id === id);
     if (tarefa) {
       alert(
-        `ID: ${tarefa.id}\nDescrição: ${tarefa.descricao}\nSetor: ${tarefa.setor}\nCadastrado por: ${tarefa.nomeUsuario}\nPrioridade: ${tarefa.prioridade}\nStatus: ${tarefa.status}\nData de Criação: ${tarefa.dataCriacao}`
+        `ID: ${tarefa.id}\nDescrição: ${tarefa.descricao}\nSetor: ${tarefa.setor}\nVeinculado a: ${tarefa.nomeUsuario}\nPrioridade: ${tarefa.prioridade}\nStatus: ${tarefa.status}\nData de Criação: ${tarefa.dataCriacao}`
       );
     } else {
       alert("Tarefa não encontrada.");
@@ -53,62 +53,204 @@ function GerenciadorTarefas() {
   const Concluida = tarefas.filter((t) => t.status === "Concluída");
 
   const tabelaKanban = () => (
-    <div style={{ display: "flex", gap: "24px", justifyContent: "center", marginTop: "32px" }}>
-      <div style={{ flex: 1, background: "#f8f9fa", borderRadius: "8px", padding: "16px", minWidth: "300px" }}>
+    <div
+      style={{
+        display: "flex",
+        gap: "24px",
+        justifyContent: "center",
+        marginTop: "32px",
+      }}
+    >
+      <div
+        style={{
+          flex: 1,
+          background: "#f8f9fa",
+          borderRadius: "8px",
+          padding: "16px",
+          minWidth: "300px",
+        }}
+      >
         <h4 className="text-center mb-3">A fazer</h4>
         {Afazer.length === 0 ? (
-          <div className="text-center text-muted">Nenhuma tarefa encontrada.</div>
+          <div className="text-center text-muted">
+            Nenhuma tarefa encontrada.
+          </div>
         ) : (
           Afazer.map((tarefa) => (
-            <div key={tarefa.id} style={{ background: "#fff", borderRadius: "6px", boxShadow: "0 1px 4px #0001", marginBottom: "16px", padding: "12px" }}>
-              <div><strong>{tarefa.descricao}</strong></div>
-              <div>Setor: {tarefa.setor}</div>
-              <div>Prioridade: {tarefa.prioridade}</div>
-              <div>Criado Por: {tarefa.nomeUsuario}</div>
+            <div
+              key={tarefa.id}
+              style={{
+                background: "#fff",
+                borderRadius: "6px",
+                boxShadow: "0 1px 4px #0001",
+                marginBottom: "16px",
+                padding: "12px",
+              }}
+            >
+              <div>
+                <strong>Descrição:</strong> {tarefa.descricao}
+              </div>
+              <div>
+                <strong> Setor: </strong> {tarefa.setor}
+              </div>
+              <div>
+                <strong>Prioridade:</strong> {tarefa.prioridade}
+              </div>
+              <div>
+                <strong>Veinculado a:</strong> {tarefa.nomeUsuario}
+              </div>
               <div className="mt-2 d-flex gap-2">
-                <Button variant="warning" size="sm" onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}>Editar</Button>
-                <Button variant="danger" size="sm" onClick={() => deletarTarefa(tarefa.id)}>Excluir</Button>
-                <Button variant="info" size="sm" onClick={() => infoTarefa(tarefa.id)}>Detalhes</Button>
+                <Button
+                  variant="warning"
+                  size="sm"
+                  onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}
+                >
+                  Editar
+                </Button>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => deletarTarefa(tarefa.id)}
+                >
+                  Excluir
+                </Button>
+                <Button
+                  variant="info"
+                  size="sm"
+                  onClick={() => infoTarefa(tarefa.id)}
+                >
+                  Detalhes
+                </Button>
               </div>
             </div>
           ))
         )}
       </div>
-      <div style={{ flex: 1, background: "#f8f9fa", borderRadius: "8px", padding: "16px", minWidth: "300px" }}>
+      <div
+        style={{
+          flex: 1,
+          background: "#f8f9fa",
+          borderRadius: "8px",
+          padding: "16px",
+          minWidth: "300px",
+        }}
+      >
         <h4 className="text-center mb-3">Em andamento</h4>
         {EmAndamento.length === 0 ? (
-          <div className="text-center text-muted">Nenhuma tarefa encontrada.</div>
+          <div className="text-center text-muted">
+            Nenhuma tarefa encontrada.
+          </div>
         ) : (
           EmAndamento.map((tarefa) => (
-            <div key={tarefa.id} style={{ background: "#fff", borderRadius: "6px", boxShadow: "0 1px 4px #0001", marginBottom: "16px", padding: "12px" }}>
-              <div><strong>{tarefa.descricao}</strong></div>
-              <div>Setor: {tarefa.setor}</div>
-              <div>Prioridade: {tarefa.prioridade}</div>
-              <div>Criado Por: {tarefa.nomeUsuario}</div>
+            <div
+              key={tarefa.id}
+              style={{
+                background: "#fff",
+                borderRadius: "6px",
+                boxShadow: "0 1px 4px #0001",
+                marginBottom: "16px",
+                padding: "12px",
+              }}
+            >
+              <div>
+                <strong>Descrição:</strong> {tarefa.descricao}
+              </div>
+              <div>
+                <strong> Setor: </strong> {tarefa.setor}
+              </div>
+              <div>
+                <strong>Prioridade:</strong> {tarefa.prioridade}
+              </div>
+              <div>
+                <strong>Veinculado a:</strong> {tarefa.nomeUsuario}
+              </div>
               <div className="mt-2 d-flex gap-2">
-                <Button variant="warning" size="sm" onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}>Editar</Button>
-                <Button variant="danger" size="sm" onClick={() => deletarTarefa(tarefa.id)}>Excluir</Button>
-                <Button variant="info" size="sm" onClick={() => infoTarefa(tarefa.id)}>Detalhes</Button>
+                <Button
+                  variant="warning"
+                  size="sm"
+                  onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}
+                >
+                  Editar
+                </Button>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => deletarTarefa(tarefa.id)}
+                >
+                  Excluir
+                </Button>
+                <Button
+                  variant="info"
+                  size="sm"
+                  onClick={() => infoTarefa(tarefa.id)}
+                >
+                  Detalhes
+                </Button>
               </div>
             </div>
           ))
         )}
       </div>
-      <div style={{ flex: 1, background: "#f8f9fa", borderRadius: "8px", padding: "16px", minWidth: "300px" }}>
+      <div
+        style={{
+          flex: 1,
+          background: "#f8f9fa",
+          borderRadius: "8px",
+          padding: "16px",
+          minWidth: "300px",
+        }}
+      >
         <h4 className="text-center mb-3">Concluída</h4>
         {Concluida.length === 0 ? (
-          <div className="text-center text-muted">Nenhuma tarefa encontrada.</div>
+          <div className="text-center text-muted">
+            Nenhuma tarefa encontrada.
+          </div>
         ) : (
           Concluida.map((tarefa) => (
-            <div key={tarefa.id} style={{ background: "#fff", borderRadius: "6px", boxShadow: "0 1px 4px #0001", marginBottom: "16px", padding: "12px" }}>
-              <div><strong>{tarefa.descricao}</strong></div>
-              <div>Setor: {tarefa.setor}</div>
-              <div>Prioridade: {tarefa.prioridade}</div>
-              <div>Criado Por: {tarefa.nomeUsuario}</div>
+            <div
+              key={tarefa.id}
+              style={{
+                background: "#fff",
+                borderRadius: "6px",
+                boxShadow: "0 1px 4px #0001",
+                marginBottom: "16px",
+                padding: "12px",
+              }}
+            >
+              <div>
+                <strong>Descrição:</strong> {tarefa.descricao}
+              </div>
+              <div>
+                <strong> Setor: </strong> {tarefa.setor}
+              </div>
+              <div>
+                <strong>Prioridade:</strong> {tarefa.prioridade}
+              </div>
+              <div>
+                <strong>Veinculado a:</strong> {tarefa.nomeUsuario}
+              </div>
               <div className="mt-2 d-flex gap-2">
-                <Button variant="warning" size="sm" onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}>Editar</Button>
-                <Button variant="danger" size="sm" onClick={() => deletarTarefa(tarefa.id)}>Excluir</Button>
-                <Button variant="info" size="sm" onClick={() => infoTarefa(tarefa.id)}>Detalhes</Button>
+                <Button
+                  variant="warning"
+                  size="sm"
+                  onClick={() => navigate(`/editar-tarefa/${tarefa.id}`)}
+                >
+                  Editar
+                </Button>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => deletarTarefa(tarefa.id)}
+                >
+                  Excluir
+                </Button>
+                <Button
+                  variant="info"
+                  size="sm"
+                  onClick={() => infoTarefa(tarefa.id)}
+                >
+                  Detalhes
+                </Button>
               </div>
             </div>
           ))

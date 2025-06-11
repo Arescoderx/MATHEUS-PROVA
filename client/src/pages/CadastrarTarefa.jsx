@@ -26,7 +26,12 @@ function CadastrarTarefa() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/tarefas", data);
+      const hoje = new Date().toISOString().split("T")[0];
+      const novaTarefa = {
+        ...data,
+        dataCriacao: hoje,
+      };
+      await axios.post("http://localhost:5000/tarefas", novaTarefa);
       alert("Tarefa cadastrada com sucesso!");
       reset();
       navigate("/");
@@ -116,17 +121,6 @@ function CadastrarTarefa() {
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Data de Criação</Form.Label>
-              <Form.Control
-                type="date"
-                {...register("dataCriacao", { required: true })}
-                isInvalid={errors.dataCriacao}
-              />
-              <Form.Control.Feedback type="invalid">
-                Data de criação é obrigatória.
-              </Form.Control.Feedback>
-            </Form.Group>
             <div className="d-grid">
               <Button type="submit" variant="primary">
                 Salvar Produto

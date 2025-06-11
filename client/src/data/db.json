@@ -1,12 +1,12 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "cr7a",
       "nome": "João Silva",
       "email": "JoaoSilva@gmail.com"
     },
     {
-      "id": 2,
+      "id": "a2fe",
       "nome": "Maria Oliveira",
       "email": "mariaoliveira@gmail.com"
     },
@@ -14,17 +14,27 @@
       "id": "a189",
       "nome": "Leonardo",
       "email": "matheus.schmidt@aluno.senai.br"
+    },
+    {
+      "id": "aa4a",
+      "nome": "Gregory Velloso",
+      "email": "gregoryvelloso@gmail.com"
+    },
+    {
+      "id": "550e",
+      "nome": "Pietra Lopes",
+      "email": "PietraLopes@gmail.com"
     }
   ],
   "tarefas": [
     {
-      "descricao": "Notebook do Messi",
-      "setor": "Mecanica",
-      "nomeUsuario": "João Silva",
-      "prioridade": "Alta",
-      "status": "Em andamento",
+      "descricao": "Fazer manutenção",
+      "setor": "Proframação",
+      "nomeUsuario": "Pietra Lopes",
+      "prioridade": "Baixa",
+      "status": "A fazer",
       "dataCriacao": "2025-06-11",
-      "id": "a935"
+      "id": "1afc"
     }
   ]
 }

@@ -1,18 +1,18 @@
-// src/components/NavbarComponent.jsx
+
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
+import "./NavbarComponent.css";
 function NavbarComponent() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar className="navbar" expand="lg">
       <Container>
-        <Navbar.Brand as={NavLink} to="/" className="fw-bold text-uppercase">
+        <Navbar.Brand as={NavLink} to="/" className="fw-bold text-uppercase ">
           Gerenciador de Tarefas
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto ">
             <Nav.Link
               as={NavLink}
               to="/"
