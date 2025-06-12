@@ -28,13 +28,76 @@
   ],
   "tarefas": [
     {
-      "descricao": "Fazer manutenção",
-      "setor": "Proframação",
-      "nomeUsuario": "Pietra Lopes",
-      "prioridade": "Baixa",
+      "descricao": "Atualizar documentação técnica",
+      "setor": "Documentação",
+      "nomeUsuario": "Maria Oliveira",
+      "prioridade": "Média",
+      "status": "A fazer",
+      "dataCriacao": "2025-06-10",
+      "id": "2bdf"
+    },
+    {
+      "descricao": "Criar testes automatizados",
+      "setor": "QA",
+      "nomeUsuario": "Gregory Velloso",
+      "prioridade": "Alta",
       "status": "A fazer",
       "dataCriacao": "2025-06-11",
-      "id": "1afc"
+      "id": "4d0a"
+    },
+    {
+      "descricao": "Realizar backup dos bancos de dados",
+      "setor": "Infraestrutura",
+      "nomeUsuario": "Maria Oliveira",
+      "prioridade": "Alta",
+      "status": "A fazer",
+      "dataCriacao": "2025-06-11",
+      "id": "6a10"
+    },
+    {
+      "descricao": "Corrigir bugs reportados pelos testes",
+      "setor": "Desenvolvimento",
+      "nomeUsuario": "João Silva",
+      "prioridade": "Alta",
+      "status": "Em andamento",
+      "dataCriacao": "2025-06-10",
+      "id": "7b21"
+    },
+    {
+      "descricao": "Monitorar uso de recursos no servidor",
+      "setor": "Infraestrutura",
+      "nomeUsuario": "Leonardo",
+      "prioridade": "Média",
+      "status": "Em andamento",
+      "dataCriacao": "2025-06-10",
+      "id": "10e54"
+    },
+    {
+      "descricao": "Revisar plano de testes de regressão",
+      "setor": "QA",
+      "nomeUsuario": "Maria Oliveira",
+      "prioridade": "Baixa",
+      "status": "Concluída",
+      "dataCriacao": "2025-06-09",
+      "id": "11f65"
+    },
+    {
+      "descricao": "Preparar ambiente de homologação",
+      "setor": "DevOps",
+      "nomeUsuario": "João Silva",
+      "prioridade": "Média",
+      "status": "Em andamento",
+      "dataCriacao": "2025-06-11",
+      "id": "12g76"
+    },
+    {
+      "descricao": "Atualizar dependência do projeto",
+      "setor": "Desenvolvimentu",
+      "nomeUsuario": "João Silva",
+      "prioridade": "Alta",
+      "status": "Concluída",
+      "dataCriacao": "2025-06-10",
+      "id": "13h87"
     }
   ]
 }

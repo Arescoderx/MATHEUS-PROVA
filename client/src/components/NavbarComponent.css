@@ -1,12 +1,15 @@
-.navbar{
+.navbar {
   background-color: #0056b3;
-  
-}
-
-.navbar .navbar-brand {
-  color: #fff;
 }
 
 .nav-link {
-  color: #fff !important;
+  text-transform: uppercase !important;
+  background-color: #fff !important;
+  margin-left: 30px !important;
+  border-radius: 20px !important;
 }
+.nav-link:hover {
+  color: #0056b3 !important;
+  font-weight: bold !important;
+}
+
