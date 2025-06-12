@@ -14,6 +14,6 @@ CREATE TABLE tarefas (
     setor VARCHAR(100) NOT NULL,
     prioridade ENUM('baixa', 'média', 'alta') NOT NULL,
     data_cadastro DATE NOT NULL,
-    status ENUM('a fazer', 'em andamento', 'concluido') NOT NULL DEFAULT 'a fazer',
+    status ENUM('a fazer', 'fazendo', 'pronto') NOT NULL DEFAULT 'a fazer',
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
