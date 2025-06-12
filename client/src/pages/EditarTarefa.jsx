@@ -128,9 +128,9 @@ function EditarTarefa() {
                 isInvalid={errors.status}
               >
                 <option value="">Selecione o status</option>
-                <option value="A fazer">A fazer</option>
-                <option value="Em andamento">Em andamento</option>
-                <option value="Concluída">Concluída</option>
+                <option value="a fazer">A fazer</option>
+                <option value="fazendo">Fazendo</option>
+                <option value="pronto">Pronto</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 Selecione um status.

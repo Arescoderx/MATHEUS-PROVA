@@ -48,9 +48,9 @@ function GerenciadorTarefas() {
     carregarTarefas();
   }, []);
 
-  const Afazer = tarefas.filter((t) => t.status === "A fazer");
-  const EmAndamento = tarefas.filter((t) => t.status === "Em andamento");
-  const Concluida = tarefas.filter((t) => t.status === "Concluída");
+  const Afazer = tarefas.filter((t) => t.status === "a fazer");
+  const Fazendo = tarefas.filter((t) => t.status === "fazendo");
+  const Pronto = tarefas.filter((t) => t.status === "pronto");
 
   const tabelaKanban = () => (
     <div
@@ -135,13 +135,13 @@ function GerenciadorTarefas() {
           minWidth: "300px",
         }}
       >
-        <h4 className="text-center mb-3">Em andamento</h4>
-        {EmAndamento.length === 0 ? (
+        <h4 className="text-center mb-3">Fazendo</h4>
+        {Fazendo.length === 0 ? (
           <div className="text-center text-muted">
             Nenhuma tarefa encontrada.
           </div>
         ) : (
-          EmAndamento.map((tarefa) => (
+          Fazendo.map((tarefa) => (
             <div
               key={tarefa.id}
               style={{
@@ -200,13 +200,13 @@ function GerenciadorTarefas() {
           minWidth: "300px",
         }}
       >
-        <h4 className="text-center mb-3">Concluída</h4>
-        {Concluida.length === 0 ? (
+        <h4 className="text-center mb-3">Pronto</h4>
+        {Pronto.length === 0 ? (
           <div className="text-center text-muted">
             Nenhuma tarefa encontrada.
           </div>
         ) : (
-          Concluida.map((tarefa) => (
+          Pronto.map((tarefa) => (
             <div
               key={tarefa.id}
               style={{

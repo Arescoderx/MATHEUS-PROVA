@@ -114,7 +114,7 @@ function CadastrarTarefa() {
                 isInvalid={errors.status}
                 disabled
               >
-                <option value="A fazer">A fazer</option>{" "}
+                <option value="a fazer">A fazer</option>{" "}
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 Selecione um status.
